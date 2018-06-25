@@ -6,7 +6,7 @@ package org.syaku.example1;
  * @since 2018. 6. 25.
  */
 public class BinarySearch {
-  static Integer indexOf(Integer[] items, Integer value) {
+  public static Integer indexOf(Integer[] items, Integer value) {
     Integer start = 0;
     Integer end = items.length - 1;
 
@@ -24,12 +24,5 @@ public class BinarySearch {
     }
 
     return null;
-  }
-
-  public static void main(String[] args) {
-    Integer[] items = new Integer[]{ 1, 3, 5, 7, 9 };
-
-    System.out.println(indexOf(items, 9));
-    System.out.println(indexOf(items, -1));
   }
 }
