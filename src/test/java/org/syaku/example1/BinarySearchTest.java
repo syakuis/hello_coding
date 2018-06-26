@@ -6,6 +6,7 @@ import org.junit.Test;
 /**
  * @author Seok Kyun. Choi. 최석균 (Syaku)
  * @since 2018. 6. 26.
+ * @see BinarySearch
  */
 public class BinarySearchTest {
   @Test

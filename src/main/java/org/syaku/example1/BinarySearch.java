@@ -1,7 +1,7 @@
 package org.syaku.example1;
 
 /**
- * 이진탐색
+ * 이진탐색 자바 코드로 작성
  * @author Seok Kyun. Choi. 최석균 (Syaku)
  * @since 2018. 6. 25.
  */

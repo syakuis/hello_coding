@@ -12,9 +12,15 @@ plugins {
 apply plugin: 'idea'
 
 dependencies {
+    api 'org.slf4j:slf4j-api:1.7.25'
+    runtime 'ch.qos.logback:logback-classic:1.2.1'
+    api 'org.apache.commons:commons-lang3:3.7'
+    compileOnly 'org.projectlombok:lombok:1.18.0'
+    api 'org.projectlombok:lombok:1.18.0'
     testImplementation 'junit:junit:4.12'
 }
 
 repositories {
     jcenter()
+    mavenCentral()
 }
