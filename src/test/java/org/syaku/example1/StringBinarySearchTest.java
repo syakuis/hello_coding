@@ -27,12 +27,22 @@ public class StringBinarySearchTest {
     }
   }
   @Test(timeout = 1000)
-  public void test() {
+  public void 직접만든기능이용() {
     long start = System.currentTimeMillis();
     Collections.sort(result);
     Assert.assertEquals(Contacts.findByName(result, "가나다"), new Contacts("가나다", "010"));
     Assert.assertEquals(Contacts.findByName(result, "홍길동"), new Contacts("홍길동", "010"));
     Assert.assertNull(Contacts.findByName(result, "아무개"));
+    log.debug("exit -> {} ms", (System.currentTimeMillis() - start));
+  }
+
+  @Test(timeout = 1000)
+  public void 자바컬랙션이용() {
+    long start = System.currentTimeMillis();
+    Collections.sort(result);
+    Assert.assertEquals(result.get(Collections.binarySearch(result, new Contacts("가나다", "010"))), new Contacts("가나다", "010"));
+    Assert.assertEquals(result.get(Collections.binarySearch(result, new Contacts("홍길동", "010"))), new Contacts("홍길동", "010"));
+    Assert.assertTrue(Collections.binarySearch(result, new Contacts("아무개", "010")) < 0);
     log.debug("exit -> {} ms", (System.currentTimeMillis() - start));
   }
 }
